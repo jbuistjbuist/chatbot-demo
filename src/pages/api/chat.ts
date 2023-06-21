@@ -56,11 +56,7 @@ const handleRequest = async ({ prompt, userId }: { prompt: string, userId: strin
     const inquiry = inquiryChainResult.text
 
     console.log(inquiry)
-
-
-    console.log(inquiry)
-
-
+    
     // Embed the user's intent and query the Pinecone index
     const embedder = new OpenAIEmbeddings({
       modelName: "text-embedding-ada-002"
@@ -84,8 +80,6 @@ const handleRequest = async ({ prompt, userId }: { prompt: string, userId: strin
       const { url } = metadata
       return url
     })))
-
-    console.log(urls)
 
 
     const docs = matches && Array.from(
